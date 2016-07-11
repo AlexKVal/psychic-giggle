@@ -17,7 +17,6 @@ defmodule VideoStream.Video do
   def changeset(struct, params \\ %{}) do
     struct
     |> cast(params, [:title, :video_file])
-    |> validate_required([:title, :video_file])
     |> put_video_file()
   end
 
